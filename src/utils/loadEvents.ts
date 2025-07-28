@@ -3,7 +3,7 @@ import fs from 'fs';
 import type { Client } from 'discord.js';
 import type { EventModule } from '../type';
 
-export async function loadEvents(client: Client, eventsPath: string) {
+export async function loadEvents(client: Client, eventsPath: string = './src/events') {
   const absolutePath = path.resolve(eventsPath);
   const files = fs
     .readdirSync(absolutePath)

@@ -1,5 +1,6 @@
 import { Client, Collection, GatewayIntentBits } from "discord.js";
 import { loadEvents } from "./utils/loadEvents";
+import { loadCommands } from "./utils/loadCommands";
 
 const client = new Client({
         intents: [
@@ -12,6 +13,7 @@ const client = new Client({
 
 client.commands = new Collection<string, any>();
 
-await loadEvents(client, './src/events')
+await loadEvents(client)
+await loadCommands(client)
 
 client.login(Bun.env.DISCORD_TOKEN);
