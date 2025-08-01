@@ -5,7 +5,7 @@ import { Collection, type ClientEvents } from 'discord.js';
 declare module 'discord.js' {
   interface Client
   {
-    commands: Collection<string, any>;
+    commands: Collection<string, CommandModule>;
   }
 }
 

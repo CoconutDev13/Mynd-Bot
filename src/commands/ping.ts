@@ -2,13 +2,14 @@ import { ChatInputCommandInteraction, SlashCommandBuilder, type Interaction } fr
 import type { CommandModule } from '../type';
 
 const command: CommandModule = {
-  data: new SlashCommandBuilder()
-    .setName('ping')
-    .setDescription('Replies with Pong!'),
+        data: new SlashCommandBuilder()
+                .setName('ping')
+                .setDescription('Replies with Pong!'),
 
-  async execute(interaction: ChatInputCommandInteraction) {
-    await interaction.reply('Pong!');
-  }
+        async execute(interaction: ChatInputCommandInteraction)
+        {
+                await interaction.reply('Pong!');
+        }
 };
 
 export default command;
